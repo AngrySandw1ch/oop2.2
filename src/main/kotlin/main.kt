@@ -1,79 +1,21 @@
 import postComponents.*
 
 fun main() {
-    val post1 = Post(
-        2,
-        4,
-        6,
-        8,
-        20,
-        "text1",
-        10,
-        20,
-        2,
-        Comments(),
-        Copyright(),
-        Likes(),
-        Reposts(),
-        Views(),
-        "type1",
-        22,
-        false,
-        false,
-        false,
-        false,
-        Donut(),
-        112
-    )
-    val post2 = Post(
-        3,
-        5,
-        7,
-        9,
-        22,
-        "text2",
-        12,
-        21,
-        3,
-        Comments(),
-        Copyright(),
-        Likes(),
-        Reposts(),
-        Views(),
-        "type2",
-        23,
-        false,
-        false,
-        false,
-        false,
-        Donut(),
-        114
-    )
-    val post3 = Post(
-        4,
-        6,
-        8,
-        10,
-        23,
-        "text3",
-        14,
-        22,
-        4,
-        Comments(),
-        Copyright(),
-        Likes(),
-        Reposts(),
-        Views(),
-        "type3",
-        24,
-        false,
-        false,
-        false,
-        false,
-        Donut(),
-        115
-    )
-    WallService.add(post1)
-    WallService.add(post2)
-    WallService.add(post3)
+    val post1 = Post()
+    val post2 = Post()
+    val post3 = Post()
+
+    val resultOne = WallService.add(post1)
+    println("ID первого поста: ${resultOne.id}")
+    val resultTwo = WallService.add(post2)
+    println("ID второго поста: ${resultTwo.id}")
+    val resultThree = WallService.add(post3)
+    println("ID третьего поста: ${resultThree.id}")
+
+    val postOneIsChange = WallService.update(resultOne)
+    println("Пост изменен: $postOneIsChange")
+    val postTwoIsChange = WallService.update(resultTwo)
+    println("Пост изменен: $postTwoIsChange")
+    val postThreeIsChange = WallService.update(resultThree)
+    println("Пост изменен: $postThreeIsChange")
 }
