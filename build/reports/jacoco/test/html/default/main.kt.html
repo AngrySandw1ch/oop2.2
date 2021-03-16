@@ -4,20 +4,20 @@ fun main() {
 <span class="nc" id="L4">    val post1 = Post()</span>
 <span class="nc" id="L5">    val post2 = Post()</span>
 <span class="nc" id="L6">    val post3 = Post()</span>
-<span class="nc" id="L7">    val wallService = WallService()</span>
 
-<span class="nc" id="L9">    val resultOne = wallService.add(post1)</span>
+
+<span class="nc" id="L9">    val resultOne = WallService.add(post1)</span>
 <span class="nc" id="L10">    println(&quot;ID РїРµСЂРІРѕРіРѕ РїРѕСЃС‚Р°: ${resultOne.id}&quot;)</span>
-<span class="nc" id="L11">    val resultTwo = wallService.add(post2)</span>
+<span class="nc" id="L11">    val resultTwo = WallService.add(post2)</span>
 <span class="nc" id="L12">    println(&quot;ID РІС‚РѕСЂРѕРіРѕ РїРѕСЃС‚Р°: ${resultTwo.id}&quot;)</span>
-<span class="nc" id="L13">    val resultThree = wallService.add(post3)</span>
+<span class="nc" id="L13">    val resultThree = WallService.add(post3)</span>
 <span class="nc" id="L14">    println(&quot;ID С‚СЂРµС‚СЊРµРіРѕ РїРѕСЃС‚Р°: ${resultThree.id}&quot;)</span>
 
-<span class="nc" id="L16">    val postOneIsChange = wallService.update(resultOne)</span>
+<span class="nc" id="L16">    val postOneIsChange = WallService.update(resultOne)</span>
 <span class="nc" id="L17">    println(&quot;РџРѕСЃС‚ РёР·РјРµРЅРµРЅ: $postOneIsChange&quot;)</span>
-<span class="nc" id="L18">    val postTwoIsChange = wallService.update(resultTwo)</span>
+<span class="nc" id="L18">    val postTwoIsChange = WallService.update(resultTwo)</span>
 <span class="nc" id="L19">    println(&quot;РџРѕСЃС‚ РёР·РјРµРЅРµРЅ: $postTwoIsChange&quot;)</span>
-<span class="nc" id="L20">    val postThreeIsChange = wallService.update(resultThree)</span>
+<span class="nc" id="L20">    val postThreeIsChange = WallService.update(resultThree)</span>
 <span class="nc" id="L21">    println(&quot;РџРѕСЃС‚ РёР·РјРµРЅРµРЅ: $postThreeIsChange&quot;)</span>
 <span class="nc" id="L22">}</span>
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

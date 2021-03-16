@@ -1,14 +1,12 @@
 import postComponents.*
 
-class WallService {
+object WallService {
     private var posts = emptyArray<Post>()
-    var uniqueId = 0
 
     fun add(post: Post): Post {
-        val postWithId = post.copy(id = post.id + uniqueId)
+        val postWithId = if (posts.isEmpty()) post.copy(id = 1) else post.copy(id = posts.last().id + 1)
         posts += postWithId
-        uniqueId++
-        return postWithId
+        return posts.last()
     }
 
     fun update(incomingPost: Post): Boolean {

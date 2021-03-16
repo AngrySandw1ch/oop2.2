@@ -4,19 +4,19 @@ fun main() {
     val post1 = Post()
     val post2 = Post()
     val post3 = Post()
-    val wallService = WallService()
 
-    val resultOne = wallService.add(post1)
+
+    val resultOne = WallService.add(post1)
     println("ID первого поста: ${resultOne.id}")
-    val resultTwo = wallService.add(post2)
+    val resultTwo = WallService.add(post2)
     println("ID второго поста: ${resultTwo.id}")
-    val resultThree = wallService.add(post3)
+    val resultThree = WallService.add(post3)
     println("ID третьего поста: ${resultThree.id}")
 
-    val postOneIsChange = wallService.update(resultOne)
+    val postOneIsChange = WallService.update(resultOne)
     println("Пост изменен: $postOneIsChange")
-    val postTwoIsChange = wallService.update(resultTwo)
+    val postTwoIsChange = WallService.update(resultTwo)
     println("Пост изменен: $postTwoIsChange")
-    val postThreeIsChange = wallService.update(resultThree)
+    val postThreeIsChange = WallService.update(resultThree)
     println("Пост изменен: $postThreeIsChange")
 }

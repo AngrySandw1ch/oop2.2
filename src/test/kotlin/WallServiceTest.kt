@@ -5,46 +5,37 @@ import org.junit.Assert.*
 class WallServiceTest {
 
     @Test
-    fun update_caseTrue() {
+    fun add() {
         //arrange
-        val service = WallService()
-
-        val post1 = Post(id = 1)
-        val post2 = Post(id = 2)
-        val post3 = Post(id = 3)
-
-        service.add(post1)
-        service.add(post2)
-        service.add(post3)
+        val post = Post()
 
         //act
-        val update = Post()
-        val result = service.update(update)
+        val result = WallService.add(post)
 
         //assert
-        assertTrue(result)
+        assertNotNull(result)
+
 
     }
 
     @Test
-    fun update_caseFalse() {
+    fun update() {
         //arrange
-        val service = WallService()
-
         val post1 = Post(id = 1)
         val post2 = Post(id = 2)
         val post3 = Post(id = 3)
 
-        service.add(post1)
-        service.add(post2)
-        service.add(post3)
+
+        WallService.add(post1)
+        WallService.add(post2)
+        WallService.add(post3)
 
         //act
-        val update = Post(id = 4)
-        val result = service.update(update)
+        val update = Post()
+        val result = WallService.update(update)
 
         //assert
-        assertFalse(result)
-
+        assertTrue(result)
     }
+
 }
