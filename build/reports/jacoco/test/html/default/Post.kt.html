@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Post.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hometaskOOP.1</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Post.kt</span></div><h1>Post.kt</h1><pre class="source lang-java linenums">import postComponents.*
+
+<span class="fc" id="L3">data class Post(</span>
+<span class="fc" id="L4">    val id: Int = 1,</span>
+<span class="pc" id="L5">    val ownerId: Int = 2,</span>
+<span class="pc" id="L6">    val fromId: Int = 3,</span>
+<span class="pc" id="L7">    val createdBy: Int = 4,</span>
+<span class="pc" id="L8">    val date: Int = 5,</span>
+<span class="pc" id="L9">    val text: String = &quot;some text&quot;,</span>
+<span class="pc" id="L10">    val replyOwnerId: Int = 6,</span>
+<span class="pc" id="L11">    val replyPostId: Int = 7,</span>
+<span class="pc" id="L12">    val friendsOnly: Int = 8,</span>
+<span class="pc" id="L13">    val comments: Comments = Comments(),</span>
+<span class="pc" id="L14">    val copyright: Copyright = Copyright(),</span>
+<span class="pc" id="L15">    val likes: Likes = Likes(),</span>
+<span class="pc" id="L16">    val reposts: Reposts = Reposts(),</span>
+<span class="pc" id="L17">    val views: Views = Views(),</span>
+<span class="pc" id="L18">    val postType: String = &quot;some post&quot;,</span>
+<span class="pc" id="L19">    val signerId: Int = 9,</span>
+<span class="pc" id="L20">    val canPin: Boolean = false,</span>
+<span class="pc" id="L21">    val isPined: Boolean = false,</span>
+<span class="pc" id="L22">    val markedAsAds: Boolean = false,</span>
+<span class="pc" id="L23">    val isFavorite: Boolean = false,</span>
+<span class="pc" id="L24">    val donut: Donut = Donut(),</span>
+<span class="pc" id="L25">    val postponedId: Int = 10</span>
+) {
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
