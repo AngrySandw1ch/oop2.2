@@ -1,6 +1,6 @@
 import postComponents.*
 
-object WallService {
+class WallService {
     private var posts = emptyArray<Post>()
     var uniqueId = 0
 
