@@ -10,16 +10,17 @@ class WallServiceTest {
         val post = Post()
 
         //act
+        val expectedPost = Post(id = 4)
         val result = WallService.add(post)
 
         //assert
-        assertNotNull(result)
+        assertEquals(result.id, expectedPost.id)
 
 
     }
 
     @Test
-    fun update() {
+    fun update_caseTrue() {
         //arrange
         val post1 = Post(id = 1)
         val post2 = Post(id = 2)
@@ -38,4 +39,15 @@ class WallServiceTest {
         assertTrue(result)
     }
 
+    @Test
+    fun update_caseFalse() {
+        //arrange
+        val update = Post(id = 5)
+
+        //act
+        val result = WallService.update(update)
+
+        //assert
+        assertFalse(result)
+    }
 }

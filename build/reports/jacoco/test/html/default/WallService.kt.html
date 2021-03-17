@@ -10,8 +10,8 @@
     }
 
     fun update(incomingPost: Post): Boolean {
-<span class="pc bpc" id="L13" title="1 of 2 branches missed.">        for ((index, post) in posts.withIndex()) {</span>
-<span class="pc bpc" id="L14" title="1 of 2 branches missed.">            if (incomingPost.id == post.id) {</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        for ((index, post) in posts.withIndex()) {</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">            if (incomingPost.id == post.id) {</span>
 <span class="fc" id="L15">                posts[index] = post.copy(</span>
 <span class="fc" id="L16">                    ownerId = 111,</span>
 <span class="fc" id="L17">                    fromId = 222,</span>
@@ -24,7 +24,7 @@
 <span class="fc" id="L24">                return true</span>
             }
         }
-<span class="nc" id="L27">        return false</span>
+<span class="fc" id="L27">        return false</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
