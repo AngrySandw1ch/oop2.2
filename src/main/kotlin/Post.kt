@@ -1,7 +1,7 @@
 import postComponents.*
 
 data class Post(
-    val id: Int = 1,
+    val id: Int? = null,
     val ownerId: Int = 2,
     val fromId: Int = 3,
     val createdBy: Int = 4,

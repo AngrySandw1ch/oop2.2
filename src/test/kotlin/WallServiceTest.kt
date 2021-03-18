@@ -32,7 +32,7 @@ class WallServiceTest {
         WallService.add(post3)
 
         //act
-        val update = Post()
+        val update = Post(1)
         val result = WallService.update(update)
 
         //assert
