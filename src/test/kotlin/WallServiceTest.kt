@@ -1,3 +1,4 @@
+import attachments.NoteAttachment
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -50,4 +51,25 @@ class WallServiceTest {
         //assert
         assertFalse(result)
     }
+
+    @Test
+    fun addAttachment() {
+        //arrange
+        val noteAttachment = NoteAttachment(
+            4,
+            4,
+            "title",
+            "text",
+            23,
+            22,
+            "readComments",
+            "viewYrl"
+        )
+        //act
+        val result = WallService.addAttachment(noteAttachment)
+        //assert
+        assertEquals(result.type, noteAttachment.type)
+    }
 }
+
+
