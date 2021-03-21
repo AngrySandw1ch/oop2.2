@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WallServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-03-21T11:57:15" hostname="ARTEM" time="0.252">
+<testsuite name="WallServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-03-21T17:02:22" hostname="ARTEM" time="0.316">
   <properties/>
-  <testcase name="addAttachment" classname="WallServiceTest" time="0.232"/>
-  <testcase name="update_caseTrue" classname="WallServiceTest" time="0.011"/>
+  <testcase name="addAttachment" classname="WallServiceTest" time="0.272"/>
+  <testcase name="update_caseTrue" classname="WallServiceTest" time="0.043"/>
   <testcase name="add" classname="WallServiceTest" time="0.0"/>
-  <testcase name="update_caseFalse" classname="WallServiceTest" time="0.002"/>
+  <testcase name="update_caseFalse" classname="WallServiceTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

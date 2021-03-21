@@ -17,8 +17,8 @@ class AudioAttachment(
     date: Int,
     noSearch: Boolean,
     isHq: Boolean,
-    override val type: String = "attachments.Audio",
-    val objectType: Audio = Audio(
+    override val type: String = "Audio",
+    val audio: Audio = Audio(
         id,
         ownerId,
         artist,
@@ -44,8 +44,8 @@ class NoteAttachment(
     comments: Int,
     readComments: String,
     viewUrl: String,
-    override val type: String = "attachments.Note",
-    val objectType: Note = Note(
+    override val type: String = "Note",
+    val note: Note = Note(
         id,
         ownerId,
         title,
@@ -75,8 +75,8 @@ class PageAttachment(
     source: String,
     html: String,
     viewUrl: String,
-    override val type: String = "attachments.Page",
-    val objectType: Page = Page(
+    override val type: String = "Page",
+    val page: Page = Page(
         id,
         groupId,
         creatorId,
@@ -107,8 +107,8 @@ class PhotoAttachment(
     size: Array<Int> = emptyArray(),
     width: Int,
     height: Int,
-    override val type: String = "attachments.Photo",
-    val objectType: Any = Photo(
+    override val type: String = "Photo",
+    val photo: Photo = Photo(
         id,
         albumId,
         ownerId,
@@ -127,8 +127,8 @@ class PostSourceAttachment(
     platform: String,
     data: String,
     url: String,
-    override val type: String = "attachments.PostSource",
-    val objectType: PostSource = PostSource(
+    override val type: String = "PostSource",
+    val postSource: PostSource = PostSource(
         ttype,
         platform,
         data,
