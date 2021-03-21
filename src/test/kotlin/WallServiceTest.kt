@@ -1,3 +1,4 @@
+import attachments.Attachment
 import attachments.NoteAttachment
 import org.junit.Test
 

@@ -1,4 +1,3 @@
-import postComponents.*
 import attachments.*
 
 object WallService {
@@ -32,5 +31,4 @@ object WallService {
         attachments += attachment
         return attachments.last()
     }
-
 }
