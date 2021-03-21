@@ -1,7 +1,9 @@
 import postComponents.*
+import attachments.*
 
 object WallService {
     private var posts = emptyArray<Post>()
+    private var attachments = emptyArray<Attachment>()
 
     fun add(post: Post): Post {
         val postWithId = if (posts.isEmpty()) post.copy(id = 1) else post.copy(id = posts.last().id?.plus(1))
@@ -26,4 +28,9 @@ object WallService {
         }
         return false
     }
+    fun addAttachment(attachment: Attachment): Attachment {
+        attachments += attachment
+        return attachments.last()
+    }
+
 }
