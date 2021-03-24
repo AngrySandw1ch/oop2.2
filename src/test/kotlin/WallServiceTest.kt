@@ -3,6 +3,9 @@ import attachments.NoteAttachment
 import org.junit.Test
 
 import org.junit.Assert.*
+import org.junit.jupiter.api.assertThrows
+import postComponents.Donut
+import postExceptions.PostNotFoundException
 
 class WallServiceTest {
 
@@ -17,8 +20,6 @@ class WallServiceTest {
 
         //assert
         assertEquals(result.id, expectedPost.id)
-
-
     }
 
     @Test
@@ -70,6 +71,56 @@ class WallServiceTest {
         val result = WallService.addAttachment(noteAttachment)
         //assert
         assertEquals(result.type, noteAttachment.type)
+    }
+
+    @Test
+    fun createComment() {
+        //arrange
+        val comment = Comment(
+            1,
+            1,
+            22,
+            "text",
+            Donut(),
+            12,
+            NoteAttachment(
+                12,
+                14,
+                "title",
+                "text",
+                22,
+                22,
+                "readComments",
+                "viewUrl"
+            )
+        )
+        //act
+        WallService.createComment(comment)
+    }
+
+    @Test(expected = PostNotFoundException::class)
+    fun shouldNotAdd() {
+        //arrange
+        val comment = Comment(
+            1,
+            10,
+            22,
+            "text",
+            Donut(),
+            12,
+            NoteAttachment(
+                12,
+                14,
+                "title",
+                "text",
+                22,
+                22,
+                "readComments",
+                "viewUrl"
+            )
+        )
+        //act
+        WallService.createComment(comment)
     }
 }
 

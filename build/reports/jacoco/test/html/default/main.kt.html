@@ -1,23 +1,155 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>main.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hometaskOOP.1</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">main.kt</span></div><h1>main.kt</h1><pre class="source lang-java linenums">import postComponents.*
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>main.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hometaskOOP.1</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">main.kt</span></div><h1>main.kt</h1><pre class="source lang-java linenums">import attachments.*
+import postComponents.*
 
 fun main() {
-<span class="nc" id="L4">    val post1 = Post()</span>
-<span class="nc" id="L5">    val post2 = Post()</span>
-<span class="nc" id="L6">    val post3 = Post()</span>
+<span class="nc" id="L5">    val post1 = Post()</span>
+<span class="nc" id="L6">    val post2 = Post()</span>
+<span class="nc" id="L7">    val post3 = Post()</span>
 
 
-<span class="nc" id="L9">    val resultOne = WallService.add(post1)</span>
-<span class="nc" id="L10">    println(&quot;ID РїРµСЂРІРѕРіРѕ РїРѕСЃС‚Р°: ${resultOne.id}&quot;)</span>
-<span class="nc" id="L11">    val resultTwo = WallService.add(post2)</span>
-<span class="nc" id="L12">    println(&quot;ID РІС‚РѕСЂРѕРіРѕ РїРѕСЃС‚Р°: ${resultTwo.id}&quot;)</span>
-<span class="nc" id="L13">    val resultThree = WallService.add(post3)</span>
-<span class="nc" id="L14">    println(&quot;ID С‚СЂРµС‚СЊРµРіРѕ РїРѕСЃС‚Р°: ${resultThree.id}&quot;)</span>
+<span class="nc" id="L10">    val resultOne = WallService.add(post1)</span>
+<span class="nc" id="L11">    println(&quot;ID РїРµСЂРІРѕРіРѕ РїРѕСЃС‚Р°: ${resultOne.id}&quot;)</span>
+<span class="nc" id="L12">    val resultTwo = WallService.add(post2)</span>
+<span class="nc" id="L13">    println(&quot;ID РІС‚РѕСЂРѕРіРѕ РїРѕСЃС‚Р°: ${resultTwo.id}&quot;)</span>
+<span class="nc" id="L14">    val resultThree = WallService.add(post3)</span>
+<span class="nc" id="L15">    println(&quot;ID С‚СЂРµС‚СЊРµРіРѕ РїРѕСЃС‚Р°: ${resultThree.id}&quot;)</span>
 
-<span class="nc" id="L16">    val postOneIsChange = WallService.update(resultOne)</span>
-<span class="nc" id="L17">    println(&quot;РџРѕСЃС‚ РёР·РјРµРЅРµРЅ: $postOneIsChange&quot;)</span>
-<span class="nc" id="L18">    val postTwoIsChange = WallService.update(resultTwo)</span>
-<span class="nc" id="L19">    println(&quot;РџРѕСЃС‚ РёР·РјРµРЅРµРЅ: $postTwoIsChange&quot;)</span>
-<span class="nc" id="L20">    val postThreeIsChange = WallService.update(resultThree)</span>
-<span class="nc" id="L21">    println(&quot;РџРѕСЃС‚ РёР·РјРµРЅРµРЅ: $postThreeIsChange&quot;)</span>
-<span class="nc" id="L22">}</span>
+<span class="nc" id="L17">    val postOneIsChange = WallService.update(resultOne)</span>
+<span class="nc" id="L18">    println(&quot;РџРѕСЃС‚ РёР·РјРµРЅРµРЅ: $postOneIsChange&quot;)</span>
+<span class="nc" id="L19">    val postTwoIsChange = WallService.update(resultTwo)</span>
+<span class="nc" id="L20">    println(&quot;РџРѕСЃС‚ РёР·РјРµРЅРµРЅ: $postTwoIsChange&quot;)</span>
+<span class="nc" id="L21">    val postThreeIsChange = WallService.update(resultThree)</span>
+<span class="nc" id="L22">    println(&quot;РџРѕСЃС‚ РёР·РјРµРЅРµРЅ: $postThreeIsChange&quot;)</span>
+
+<span class="nc" id="L24">    val noteAttachment = NoteAttachment(</span>
+<span class="nc" id="L25">        12,</span>
+<span class="nc" id="L26">        13,</span>
+<span class="nc" id="L27">        &quot;title&quot;,</span>
+<span class="nc" id="L28">        &quot;text&quot;,</span>
+<span class="nc" id="L29">        28,</span>
+<span class="nc" id="L30">        50,</span>
+<span class="nc" id="L31">        &quot;readComments&quot;,</span>
+<span class="nc" id="L32">        &quot;viewUrl&quot;</span>
+    )
+<span class="nc" id="L34">    val pageAttachment = PageAttachment(</span>
+<span class="nc" id="L35">        33,</span>
+<span class="nc" id="L36">        12,</span>
+<span class="nc" id="L37">        33,</span>
+<span class="nc" id="L38">        &quot;title&quot;,</span>
+<span class="nc" id="L39">        true,</span>
+<span class="nc" id="L40">        true,</span>
+<span class="nc" id="L41">        12,</span>
+<span class="nc" id="L42">        14,</span>
+<span class="nc" id="L43">        22,</span>
+<span class="nc" id="L44">        22,</span>
+<span class="nc" id="L45">        228,</span>
+<span class="nc" id="L46">        &quot;parent&quot;,</span>
+<span class="nc" id="L47">        &quot;parent2&quot;,</span>
+<span class="nc" id="L48">        &quot;source&quot;,</span>
+<span class="nc" id="L49">        &quot;html&quot;,</span>
+<span class="nc" id="L50">        &quot;viewUrl&quot;</span>
+    )
+<span class="nc" id="L52">    val photoAttachment = PhotoAttachment(</span>
+<span class="nc" id="L53">        4,</span>
+<span class="nc" id="L54">        6,</span>
+<span class="nc" id="L55">        12,</span>
+<span class="nc" id="L56">        14,</span>
+<span class="nc" id="L57">        &quot;text&quot;,</span>
+<span class="nc" id="L58">        23,</span>
+<span class="nc" id="L59">        emptyArray(),</span>
+<span class="nc" id="L60">        14,</span>
+<span class="nc" id="L61">        16</span>
+    )
+<span class="nc" id="L63">    val postSourceAttachment = PostSourceAttachment(</span>
+<span class="nc" id="L64">        &quot;type&quot;,</span>
+<span class="nc" id="L65">        &quot;platform&quot;,</span>
+<span class="nc" id="L66">        &quot;data&quot;,</span>
+<span class="nc" id="L67">        &quot;url&quot;</span>
+    )
+<span class="nc" id="L69">    val audioAttachment = AudioAttachment(</span>
+<span class="nc" id="L70">        23,</span>
+<span class="nc" id="L71">        443,</span>
+<span class="nc" id="L72">        &quot;artist&quot;,</span>
+<span class="nc" id="L73">        &quot;title&quot;,</span>
+<span class="nc" id="L74">        223,</span>
+<span class="nc" id="L75">        &quot;url&quot;,</span>
+<span class="nc" id="L76">        213,</span>
+<span class="nc" id="L77">        23,</span>
+<span class="nc" id="L78">        2256,</span>
+<span class="nc" id="L79">        13,</span>
+<span class="nc" id="L80">        true,</span>
+<span class="nc" id="L81">        true</span>
+    )
+
+<span class="nc" id="L84">    val pageAdded = WallService.addAttachment(pageAttachment)</span>
+<span class="nc" id="L85">    println(&quot;Added object ${pageAdded.type}&quot;)</span>
+<span class="nc" id="L86">    val noteAdded = WallService.addAttachment(noteAttachment)</span>
+<span class="nc" id="L87">    println(&quot;Added object ${noteAdded.type}&quot;)</span>
+<span class="nc" id="L88">    val photoAdded = WallService.addAttachment(photoAttachment)</span>
+<span class="nc" id="L89">    println(&quot;Added object ${photoAdded.type}&quot;)</span>
+<span class="nc" id="L90">    val postSourceAdded = WallService.addAttachment(postSourceAttachment)</span>
+<span class="nc" id="L91">    println(&quot;Added object ${postSourceAdded.type}&quot;)</span>
+<span class="nc" id="L92">    val audioAdded = WallService.addAttachment(audioAttachment)</span>
+<span class="nc" id="L93">    println(&quot;Added object ${audioAdded.type}&quot;)</span>
+
+<span class="nc" id="L95">    val comment1 = Comment(</span>
+<span class="nc" id="L96">        1,</span>
+<span class="nc" id="L97">        1,</span>
+<span class="nc" id="L98">        22,</span>
+<span class="nc" id="L99">        &quot;text&quot;,</span>
+<span class="nc" id="L100">        Donut(),</span>
+<span class="nc" id="L101">        12,</span>
+<span class="nc" id="L102">        NoteAttachment(</span>
+<span class="nc" id="L103">            12,</span>
+<span class="nc" id="L104">            14,</span>
+<span class="nc" id="L105">            &quot;title&quot;,</span>
+<span class="nc" id="L106">            &quot;text&quot;,</span>
+<span class="nc" id="L107">            22,</span>
+<span class="nc" id="L108">            22,</span>
+<span class="nc" id="L109">            &quot;readComments&quot;,</span>
+<span class="nc" id="L110">            &quot;viewUrl&quot;</span>
+        )
+    )
+<span class="nc" id="L113">    val comment2 = Comment(</span>
+<span class="nc" id="L114">        2,</span>
+<span class="nc" id="L115">        2,</span>
+<span class="nc" id="L116">        22,</span>
+<span class="nc" id="L117">        &quot;text&quot;,</span>
+<span class="nc" id="L118">        Donut(),</span>
+<span class="nc" id="L119">        12,</span>
+<span class="nc" id="L120">        NoteAttachment(</span>
+<span class="nc" id="L121">            12,</span>
+<span class="nc" id="L122">            14,</span>
+<span class="nc" id="L123">            &quot;title&quot;,</span>
+<span class="nc" id="L124">            &quot;text&quot;,</span>
+<span class="nc" id="L125">            22,</span>
+<span class="nc" id="L126">            22,</span>
+<span class="nc" id="L127">            &quot;readComments&quot;,</span>
+<span class="nc" id="L128">            &quot;viewUrl&quot;</span>
+        )
+    )
+<span class="nc" id="L131">    val comment3 = Comment(</span>
+<span class="nc" id="L132">        3,</span>
+<span class="nc" id="L133">        3,</span>
+<span class="nc" id="L134">        22,</span>
+<span class="nc" id="L135">        &quot;text&quot;,</span>
+<span class="nc" id="L136">        Donut(),</span>
+<span class="nc" id="L137">        12,</span>
+<span class="nc" id="L138">        NoteAttachment(</span>
+<span class="nc" id="L139">            12,</span>
+<span class="nc" id="L140">            14,</span>
+<span class="nc" id="L141">            &quot;title&quot;,</span>
+<span class="nc" id="L142">            &quot;text&quot;,</span>
+<span class="nc" id="L143">            22,</span>
+<span class="nc" id="L144">            22,</span>
+<span class="nc" id="L145">            &quot;readComments&quot;,</span>
+<span class="nc" id="L146">            &quot;viewUrl&quot;</span>
+        )
+    )
+<span class="nc" id="L149">    WallService.createComment(comment1)</span>
+<span class="nc" id="L150">    WallService.createComment(comment2)</span>
+<span class="nc" id="L151">    WallService.createComment(comment3)</span>
+
+<span class="nc" id="L153">    WallService.reportComment(comment1, 5)</span>
+<span class="nc" id="L154">}</span>
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -91,4 +91,64 @@ fun main() {
     println("Added object ${postSourceAdded.type}")
     val audioAdded = WallService.addAttachment(audioAttachment)
     println("Added object ${audioAdded.type}")
+
+    val comment1 = Comment(
+        1,
+        1,
+        22,
+        "text",
+        Donut(),
+        12,
+        NoteAttachment(
+            12,
+            14,
+            "title",
+            "text",
+            22,
+            22,
+            "readComments",
+            "viewUrl"
+        )
+    )
+    val comment2 = Comment(
+        2,
+        2,
+        22,
+        "text",
+        Donut(),
+        12,
+        NoteAttachment(
+            12,
+            14,
+            "title",
+            "text",
+            22,
+            22,
+            "readComments",
+            "viewUrl"
+        )
+    )
+    val comment3 = Comment(
+        3,
+        3,
+        22,
+        "text",
+        Donut(),
+        12,
+        NoteAttachment(
+            12,
+            14,
+            "title",
+            "text",
+            22,
+            22,
+            "readComments",
+            "viewUrl"
+        )
+    )
+    WallService.createComment(comment1)
+    WallService.createComment(comment2)
+    WallService.createComment(comment3)
+
+    WallService.reportComment(comment1, 5)
 }
