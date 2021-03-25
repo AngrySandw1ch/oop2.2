@@ -1,10 +1,9 @@
-import attachments.Attachment
 import attachments.NoteAttachment
 import org.junit.Test
 
 import org.junit.Assert.*
-import org.junit.jupiter.api.assertThrows
 import postComponents.Donut
+import postExceptions.CommentNotFoundException
 import postExceptions.PostNotFoundException
 
 class WallServiceTest {
@@ -15,7 +14,7 @@ class WallServiceTest {
         val post = Post()
 
         //act
-        val expectedPost = Post(id = 4)
+        val expectedPost = Post(id = 6)
         val result = WallService.add(post)
 
         //assert
@@ -45,7 +44,7 @@ class WallServiceTest {
     @Test
     fun update_caseFalse() {
         //arrange
-        val update = Post(id = 5)
+        val update = Post(id = 10)
 
         //act
         val result = WallService.update(update)
@@ -76,6 +75,8 @@ class WallServiceTest {
     @Test
     fun createComment() {
         //arrange
+        val post = Post()
+        WallService.add(post)
         val comment = Comment(
             1,
             1,
@@ -101,6 +102,8 @@ class WallServiceTest {
     @Test(expected = PostNotFoundException::class)
     fun shouldNotAdd() {
         //arrange
+        val post = Post()
+        WallService.add(post)
         val comment = Comment(
             1,
             10,
@@ -121,6 +124,80 @@ class WallServiceTest {
         )
         //act
         WallService.createComment(comment)
+    }
+
+    @Test
+    fun reportComment() {
+        //arrange
+        val post = Post()
+        WallService.add(post)
+        val comment = Comment(
+            1,
+            1,
+            22,
+            "text",
+            Donut(),
+            12,
+            NoteAttachment(
+                12,
+                14,
+                "title",
+                "text",
+                22,
+                22,
+                "readComments",
+                "viewUrl"
+            )
+        )
+        WallService.createComment(comment)
+        //act
+        WallService.reportComment(comment, 2)
+    }
+
+    @Test(expected = CommentNotFoundException::class)
+    fun shouldNotAddComment() {
+        //arrange
+        val post = Post()
+        WallService.add(post)
+        val comment = Comment(
+            1,
+            1,
+            22,
+            "text",
+            Donut(),
+            12,
+            NoteAttachment(
+                12,
+                14,
+                "title",
+                "text",
+                22,
+                22,
+                "readComments",
+                "viewUrl"
+            )
+        )
+        WallService.createComment(comment)
+        val comment1 = Comment(
+            3,
+            1,
+            22,
+            "text",
+            Donut(),
+            12,
+            NoteAttachment(
+                12,
+                14,
+                "title",
+                "text",
+                22,
+                22,
+                "readComments",
+                "viewUrl"
+            )
+        )
+        //act
+        WallService.reportComment(comment1, 2)
     }
 }
 
